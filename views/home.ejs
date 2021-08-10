@@ -1,3 +1,5 @@
 
 <h3>Hello</h3> 
-<p><%= name %> is a <%= age %> age. </p>
+<p><% dogData.forEach((dog)=>{ %>
+    <li><%= dog.name %>  is a <%= dog.type%></li>
+<% }) %>  </p>
