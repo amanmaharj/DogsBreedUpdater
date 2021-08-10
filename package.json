@@ -1,11 +1,24 @@
 {
   "name": "usa_job1",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amanmaharj/DogsBreedUpdater.git"
+  },
+  "bugs": {
+    "url": "https://github.com/amanmaharj/DogsBreedUpdater/issues"
+  },
+  "homepage": "https://github.com/amanmaharj/DogsBreedUpdater#readme",
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.1"
+  }
 }
