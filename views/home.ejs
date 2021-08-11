@@ -1,7 +1,16 @@
 
-<h3>Hello</h3> 
-<p><% dogData.forEach((dog)=>{ %>
-    <li><%= dog.name %>  is a <%= dog.type%></li>
+<h3>Dog-Breeder</h3> 
+<p><% myDog.forEach((dog, index)=>{ %>
+    <a href="/dogs/<%= index %> "><li><%= dog.name %>  is a <%= dog.type%></li></a>
 <% }) %>  </p>
 
 <a href="/dogs/new">NEW CREATE</a>
+<p style="margin-top : 3px">
+<!-- here dogs alreay is a home page but when we send the form data into the home page we can use the query attach by the get form -->
+    <form action="/dogs" method="GET">
+        <label for="nameFilter">Name</label>
+        <input type="text" name="nameFilter" id="nameFilter">
+        <input type="submit" value="Search">
+    </form>
+</p>
+
