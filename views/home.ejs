@@ -1,7 +1,15 @@
 
 <h3>Dog-Breeder</h3> 
 <p><% myDog.forEach((dog, index)=>{ %>
-    <a href="/dogs/<%= index %> "><li><%= dog.name %>  is a <%= dog.type%></li></a>
+    <li><%= dog.name %>  is a <%= dog.type%>
+    
+    <!-- Anchor tag used to direct it into the edit page -->
+    <a href="/dogs/edit/<%= index%>" style="display:block;">Edit</a>
+        <!-- this form uses the methodoverride because html doesnot support delete and put method -->
+        <form method="post" action="/dogs/<%= index%>/?_method=DELETE" >
+           <input type="submit" value="Delete">
+        </form>
+    </li>
 <% }) %>  </p>
 
 <a href="/dogs/new">NEW CREATE</a>
